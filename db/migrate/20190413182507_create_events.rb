@@ -1,7 +1,7 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
-      t.integer :anixety_level
+      t.integer :anxiety_level
       t.string :content
       t.integer :sleep
       t.integer :diet
