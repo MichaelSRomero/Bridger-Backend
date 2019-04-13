@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_191711) do
+ActiveRecord::Schema.define(version: 2019_04_13_201433) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.integer "anxiety_level"
+    t.integer "anxiety_level", default: 0
     t.string "content"
-    t.integer "sleep"
-    t.integer "diet"
-    t.integer "social_activity"
+    t.integer "sleep", default: 0
+    t.integer "diet", default: 0
+    t.integer "social_activity", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
