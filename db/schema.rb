@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_04_13_191711) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2019_04_13_185616) do
+=======
+ActiveRecord::Schema.define(version: 2019_04_13_182516) do
+>>>>>>> cristian
+>>>>>>> 93367326a1e595c629a42436d89f5ad224ef7024
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +31,10 @@ ActiveRecord::Schema.define(version: 2019_04_13_191711) do
     t.integer "social_activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.integer "user_id"
+=======
+>>>>>>> cristian
   end
 
   create_table "users", force: :cascade do |t|
