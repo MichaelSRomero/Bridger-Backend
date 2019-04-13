@@ -15,13 +15,13 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    debugger
-    @user = User.new(user_params)
+    @user = User.create(user_params)
 
-    if @user.save
-      render json: @user, status: :created, location: @user
+    if @user.valid?
+      @token = JWT.encode({user_id: @user.id}, "secret")
+      render json: { user: @user.username, jwt: @token }, status: :created
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: { error: 'failed to create user' }, status: :not_acceptable
     end
   end
 
