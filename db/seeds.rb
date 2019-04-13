@@ -30,3 +30,12 @@ Event.create(
   sleep: 2,
   content: "Something terrible happened"
 )
+
+Event.create(
+  user_id: User.find_by(full_name: "Mantis Murger").id,
+  anxiety_level: 8,
+  social_activity: 9,
+  diet: 2,
+  sleep: 6,
+  content: "Something terrible happened"
+)
